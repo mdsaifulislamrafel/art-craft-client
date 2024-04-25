@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="container px-6 py-4 mx-auto">
                 <div className="lg:flex lg:items-center lg:justify-between">
                     <div className="flex items-center justify-between">
-                        <img className='w-16 h-16 mr-1 md:mr-5 rounded-full ' src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                        <img className='w-16 h-16 mr-1 md:mr-5 rounded-full ' src="https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                         <h2 className='text-2xl md:text-3xl font-bold uppercase bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient'>Name</h2>
                         <div className="flex lg:hidden">
                             <button onClick={() => setIsOpen(!isOpen)} type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
@@ -35,11 +35,14 @@ const Navbar = () => {
                     </div>
                     <div className={`${isOpen ? 'block' : 'hidden'} lg:flex md:gap-5 lg:items-center lg:mx-8`}>
                         <NavLink to={"/"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>Home</NavLink>
+                        <NavLink to={"/all-art"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>All Art & craft</NavLink>
 
+                        <NavLink to={"/add-art"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>Add Craft</NavLink>
+                        
                         {
                             user && <NavLink to={"/userProfile"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>User Profile</NavLink>
                         }
-                        <NavLink to={"/contact"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>About</NavLink>
+
 
                         <label className="swap swap-rotate">
 
