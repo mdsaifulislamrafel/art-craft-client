@@ -8,7 +8,8 @@ import Register from "../Pages/Register";
 import UserProfile from "../Pages/UserProfile";
 import AllArt from "../Pages/AllArt";
 import AddArt from "../Pages/AddArt";
-import PrivateRoute from "../PriveatRoute/PrivateRoute";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import MyArt from "../Pages/MyArt";
 
 export const router = createBrowserRouter([
     {
@@ -31,11 +32,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/all-art",
-                element: <PrivateRoute><AllArt /></PrivateRoute>
+                element: <AllArt />
             },
             {
                 path: "/add-art",
                 element: <PrivateRoute><AddArt /></PrivateRoute>
+            },
+            {
+                path: "/my-art",
+                element: <PrivateRoute><MyArt /></PrivateRoute>
             }
         ]
     }
