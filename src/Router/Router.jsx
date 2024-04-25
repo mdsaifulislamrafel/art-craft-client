@@ -10,11 +10,13 @@ import AllArt from "../Pages/AllArt";
 import AddArt from "../Pages/AddArt";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import MyArt from "../Pages/MyArt";
+import Error from "../Pages/Error";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement: <Error />,
         children: [
             {
                 path: "/",
