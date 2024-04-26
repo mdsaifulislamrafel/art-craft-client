@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const ArtCart = ({ art }) => {
     const {_id, image, item, subcategory, price, stockStatus } = art;
     
+    
     return (
         <div className="mx-auto w-full space-y-6 rounded-xl bg-white px-4 pb-8 pt-4 font-sans shadow-lg">
             <div className="relative flex h-48 w-full justify-center lg:h-[280px]">
