@@ -36,6 +36,7 @@ const AddArt = () => {
                         showConfirmButton: false,
                         timer: 1500
                     });
+                    form.reset();
                 }
             })
 
@@ -43,7 +44,7 @@ const AddArt = () => {
 
     return (
         <div className="max-w-lg mx-auto py-8 px-4 bg-white">
-            <h1 className="text-2xl font-bold text-center border-b-4 border-purple-950 mb-4">Add Craft Item</h1>
+            <h1 className="text-2xl font-bold text-center border-b-4 text-black border-purple-950 mb-4">Add Art & Craft Item</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                     <label className="block mb-1">Image URL:</label>

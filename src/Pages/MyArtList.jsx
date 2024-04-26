@@ -1,8 +1,27 @@
-import { Link } from "react-router-dom";
-
 /* eslint-disable react/prop-types */
-const MyArtList = ({ item }) => {
+
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+
+const MyArtList = ({ item, handleDelete }) => {
     const { _id, image, item: title, price, rating, customization, stockStatus } = item;
+
+    const confirmDelete = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                handleDelete(id);
+            }
+        });
+    };
+
     return (
         <div className="w-full md:w-[80%] p-2 mx-auto">
             <div className="bg-gray-100 p-6 rounded-lg">
@@ -18,7 +37,7 @@ const MyArtList = ({ item }) => {
                     <div className="space-y-5 md:space-y-10">
                         <Link to={`/update/${_id}`}><button className="btn btn-info text-white">Update</button></Link>
                         <br />
-                        <button className="btn btn-error text-white">Delete</button>
+                        <button onClick={() => confirmDelete(_id)} className="btn btn-error text-white">Delete</button>
                     </div>
                 </div>
             </div>
@@ -27,4 +46,3 @@ const MyArtList = ({ item }) => {
 };
 
 export default MyArtList;
-

@@ -37,7 +37,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/all-art",
-                element: <AllArt />
+                element: <AllArt />,
+                loader: () => fetch(`${url}/added`)
             },
             {
                 path: "/add-art",

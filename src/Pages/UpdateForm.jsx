@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const UpdateForm = () => {
     const update = useLoaderData();
-    const { _id,image, item, subcategory, shortDescription, price, rating, customization, processing_time, stockStatus } = update;
+    const { _id, image, item, subcategory, shortDescription, price, rating, customization, processing_time, stockStatus } = update;
     const handleUpdate = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -17,8 +17,7 @@ const UpdateForm = () => {
         const customization = form.customization.value;
         const processing_time = form.processing_time.value;
         const stockStatus = form.stockStatus.value;
-        const updateInfo = {_id ,image, item, subcategory, shortDescription, price, rating, customization, processing_time, stockStatus };
-        // console.log(addInfo);
+        const updateInfo = { image, item, subcategory, shortDescription, price, rating, customization, processing_time, stockStatus };
         fetch(`${url}/added/${_id}`, {
             method: 'PUT',
             headers: {
@@ -28,7 +27,6 @@ const UpdateForm = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.matchedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
