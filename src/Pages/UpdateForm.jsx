@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { url } from "../utility/url";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const UpdateForm = () => {
     const update = useLoaderData();
@@ -41,6 +42,9 @@ const UpdateForm = () => {
 
     return (
         <div className="max-w-lg mx-auto py-8 px-4 bg-white">
+            <Helmet>
+                <title>Update Craft Item</title>
+            </Helmet>
             <h1 className="text-2xl font-bold text-center border-b-4 border-purple-950 mb-4">Update Craft Item</h1>
             <form onSubmit={handleUpdate} className="space-y-4">
                 <div>
