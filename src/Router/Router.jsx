@@ -13,6 +13,7 @@ import MyArt from "../Pages/MyArt";
 import Error from "../Pages/Error";
 import CartDetails from "../Pages/CartDetails";
 import { url } from "../utility/url";
+import UpdateForm from "../Pages/UpdateForm";
 
 export const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
             {
                 path: "/my-art",
                 element: <PrivateRoute><MyArt /></PrivateRoute>
+            }, {
+                path: "/update/:id",
+                element: <UpdateForm />,
+                loader: ({ params }) => fetch(`${url}/added/${params.id}`)
             }
         ]
     }

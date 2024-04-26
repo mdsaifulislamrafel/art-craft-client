@@ -16,7 +16,7 @@ const MyArt = () => {
 
     return (
         <div>
-            <h2 className="text-4xl uppercase font-bold text-center underline my-5">My Added Product</h2>
+            <h2 className="text-4xl uppercase font-bold text-center underline text-blue-700 my-5">My Added Product</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-5">
                 {
                     item.map(item => <MyArtList key={item._id} item={item}></MyArtList>)
