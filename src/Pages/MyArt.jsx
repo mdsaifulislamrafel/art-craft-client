@@ -3,7 +3,7 @@
 const MyArt = () => {
     return (
         <div>
-            myArt
+           
         </div>
     );
 };
