@@ -11,6 +11,8 @@ import AddArt from "../Pages/AddArt";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import MyArt from "../Pages/MyArt";
 import Error from "../Pages/Error";
+import CartDetails from "../Pages/CartDetails";
+import { url } from "../utility/url";
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +41,11 @@ export const router = createBrowserRouter([
             {
                 path: "/add-art",
                 element: <PrivateRoute><AddArt /></PrivateRoute>
+            },
+            {
+                path: "/details/:id",
+                element: <PrivateRoute><CartDetails /></PrivateRoute>,
+                loader: ({ params }) => fetch(`${url}/added/${params.id}`)
             },
             {
                 path: "/my-art",
