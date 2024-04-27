@@ -3,6 +3,7 @@ import Slider from "../Pages/Slider";
 import ArtSection from "../Pages/ArtSection";
 import Teams from "../Pages/Teams";
 import Feedback from "../Pages/Feedback";
+import ArtCategories from "../Pages/ArtCategories";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             </Helmet>
             <Slider />
             <div className="p-10">
+                <ArtCategories />
                 <ArtSection />
             </div>
             <Teams />

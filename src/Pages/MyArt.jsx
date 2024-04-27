@@ -16,6 +16,7 @@ import {
 const MyArt = () => {
     const { user } = useContext(AuthContext);
     const [items, setItems] = useState([]);
+    const [filterType, setFilterType] = useState("yes");
 
     useEffect(() => {
         fetch(`${url}/myProduct/${user?.email}`)
@@ -38,7 +39,7 @@ const MyArt = () => {
             });
     };
 
-    const [filterType, setFilterType] = useState("yes");
+
 
     const handleFilterClick = (filter) => {
         setFilterType(filter);
@@ -79,7 +80,7 @@ const MyArt = () => {
             <h2 className="text-4xl font-bold text-center underline text-blue-700 my-5">My Art & Craft Item</h2>
             {items.length > 0 ?
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-5">
-                    
+
                     {
                         sortItem(items, filterType).map(item => <MyArtList key={item._id} handleDelete={handleDelete} item={item}></MyArtList>)
                     }

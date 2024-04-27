@@ -14,6 +14,7 @@ import Error from "../Pages/Error";
 import CartDetails from "../Pages/CartDetails";
 import { url } from "../utility/url";
 import UpdateForm from "../Pages/UpdateForm";
+import CategoriesCard from "../Pages/CategoriesCard";
 
 export const router = createBrowserRouter([
     {
@@ -49,6 +50,7 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute><CartDetails /></PrivateRoute>,
                 loader: ({ params }) => fetch(`${url}/added/${params.id}`)
             },
+            
             {
                 path: "/my-art",
                 element: <PrivateRoute><MyArt /></PrivateRoute>
@@ -56,6 +58,12 @@ export const router = createBrowserRouter([
                 path: "/update/:id",
                 element: <UpdateForm />,
                 loader: ({ params }) => fetch(`${url}/added/${params.id}`)
+            }, 
+            {
+                path: "/categories/:category",
+                element: <CategoriesCard />,
+                loader: ({ params }) => fetch(`${url}/category/${params.category}`)
+
             }
         ]
     }

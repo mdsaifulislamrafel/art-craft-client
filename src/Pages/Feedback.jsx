@@ -1,7 +1,7 @@
 
 const Feedback = () => {
     return (
-        <section data-aos="zoom-in" data-aos-duration="1000" className="text-black body-font bg-white p-5 md:p-10 relative">
+        <section data-aos="zoom-in" data-aos-duration="1000" className="text-black body-font bg-white p-5 my-5 md:p-10 relative">
             <div className="container px-5 mb-5 md:mb-10 mx-auto flex sm:flex-nowrap flex-wrap">
                 <div data-aos="fade-right" data-aos-duration="2000" className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
                     <iframe
