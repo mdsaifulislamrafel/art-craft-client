@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Slider from "../Pages/Slider";
 import ArtSection from "../Pages/ArtSection";
 import Teams from "../Pages/Teams";
+import Feedback from "../Pages/Feedback";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 <ArtSection />
             </div>
             <Teams />
+            <Feedback />
         </div>
     );
 };
