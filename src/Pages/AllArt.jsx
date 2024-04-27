@@ -15,7 +15,7 @@ const AllArt = () => {
             </div> */}
             <div>
 
-                <div className="overflow-x-auto">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay= "300" className="overflow-x-auto">
                     <table className="min-w-[90%] shadow-md border mx-auto border-gray-100 my-6">
                         <thead>
                             <tr className="bg-[#0095FF] text-white">
@@ -28,7 +28,7 @@ const AllArt = () => {
                         {
                             allArt.map((art) => <AllArtCard key={art._id} art={art}></AllArtCard>)
                         }
-                        
+
                     </table>
                 </div>
 

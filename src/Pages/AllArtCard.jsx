@@ -3,10 +3,10 @@
 import { Link } from "react-router-dom";
 
 const AllArtCard = ({ art }) => {
-  const { _id, image, item, shortDescription, price } = art;
+  const { _id, image, item, price } = art;
   return (
     <tbody>
-      <tr className="hover:bg-gray-50 border-b transition duration-300">
+      <tr  className="hover:bg-gray-50 border-b transition duration-300">
         <td className="py-4 px-4 flex justify-start">
           <img src={image} alt="table navigate ui" className="h-16 w-16 object-cover bg-gray-300" />
         </td>

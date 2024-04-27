@@ -3,6 +3,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { url } from "../utility/url";
 import MyArtList from "./MyArtList";
 import { Helmet } from "react-helmet-async";
+import NoItem from "./NoItem";
 
 const MyArt = () => {
     const { user } = useContext(AuthContext);
@@ -35,11 +36,13 @@ const MyArt = () => {
                 <title>My Art & Craft Item</title>
             </Helmet>
             <h2 className="text-4xl font-bold text-center underline text-blue-700 my-5">My Art & Craft Item</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-5">
-                {
-                    items.map(item => <MyArtList key={item._id} handleDelete={handleDelete} item={item}></MyArtList>)
-                }
-            </div>
+            {items.length > 0 ?
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-5">
+                    {
+                        items.map(item => <MyArtList key={item._id} handleDelete={handleDelete} item={item}></MyArtList>)
+                    }
+                </div>
+                : <> <NoItem /> </>}
         </div>
     );
 };
