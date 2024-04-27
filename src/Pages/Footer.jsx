@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
                 <Link to={"/"} className="flex items-center gap-2">
                     <img className="w-16 h-16 rounded-full" src="https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    <p className="text-xl md:text-2xl lg:text-3xl font-bold uppercase bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">Craftopia Crafts Corner</p>
+                    <p className="text-xl md:text-2xl lg:text-3xl font-bold uppercase bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">Crafts Corner</p>
                 </Link>
 
                 <p className="text-sm text-gray-600 dark:text-gray-300">© Copyright 2024. All Rights Reserved.</p>

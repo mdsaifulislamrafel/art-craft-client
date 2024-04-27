@@ -18,7 +18,7 @@ const Navbar = () => {
                 <div className="lg:flex lg:items-center lg:justify-between">
                     <div className="flex items-center justify-between">
                         <img className=' w-10 h-10 md:w-16 md:h-16 mr-1 md:mr-5 rounded-full ' src="https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                        <h2 className='text-xl md:text-1xl text-wrap lg:text-3xl font-bold uppercase bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient'>Craftopia Crafts Corner</h2>
+                        <h2 className='text-xl md:text-1xl text-wrap lg:text-3xl font-bold uppercase bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient'>Crafts Corner</h2>
                         <div className="flex lg:hidden">
                             <button onClick={() => setIsOpen(!isOpen)} type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
                                 {!isOpen ? (
