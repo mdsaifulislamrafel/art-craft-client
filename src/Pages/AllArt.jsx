@@ -10,9 +10,7 @@ const AllArt = () => {
                 <title>All Art & Craft Items</title>
             </Helmet>
             <h2 className="text-5xl text-center my-5 underline text-orange-400 font-bold">All Art & Craft Items</h2>
-            {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 
-            </div> */}
             <div>
 
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay= "300" className="overflow-x-auto">
