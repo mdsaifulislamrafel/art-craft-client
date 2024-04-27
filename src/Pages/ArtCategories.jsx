@@ -17,7 +17,7 @@ const ArtCategories = () => {
             <h2 className="text-2xl my-10 text-center underline md:text-5xl text-[#4A8DF5] font-bold">Art & Craft <Typewriter words={['Categories']} delaySpeed={1000} typeSpeed={100} cursor enabled loop={0} /></h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
-                    category.slice(1, 7)?.map(item => <div data-aos="fade-up" data-aos-duration="3000"  key={item.id} className="w-full mx-auto space-y-6 rounded-2xl bg-[#e9d5ff] px-6 py-4 shadow-md  md:w-[500px]">
+                    category.slice(1, 7)?.map(item => <div data-aos="fade-up" data-aos-duration="3000"  key={item._id} className="w-full mx-auto space-y-6 rounded-2xl bg-[#e9d5ff] px-6 py-4 shadow-md  md:w-[500px]">
                         {/* Card Image */}
                         <img width={350} height={190} className="h-[250px] w-full rounded-2xl bg-gray-400" src={item.image} alt="card navigate ui" />
                         {/* Card Heading */}
