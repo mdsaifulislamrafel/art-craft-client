@@ -57,7 +57,14 @@ const UpdateForm = () => {
                 </div>
                 <div>
                     <label className="block mb-1">Subcategory Name:</label>
-                    <input type="text" name="subcategory_Name" className="w-full border bg-white border-gray-300 rounded px-3 py-2" defaultValue={subcategory} required />
+                    <select className="w-full border bg-white border-gray-300 rounded px-3 py-2" name="subcategory_Name" defaultValue={subcategory} required>
+                        <option value="Clay-made pottery">Clay-made pottery</option>
+                        <option value="Stoneware">Stoneware</option>
+                        <option value="Porcelain">Porcelain</option>
+                        <option value="Terra Cotta">Terra Cotta</option>
+                        <option value="Ceramics & Architectural">Ceramics & Architectural</option>
+                        <option value="Home decor pottery">Home decor pottery</option>
+                    </select>
                 </div>
                 <div>
                     <label className="block mb-1">Short Description:</label>
@@ -76,7 +83,10 @@ const UpdateForm = () => {
                 <div className="md:flex md:justify-between">
                     <div className="md:w-1/2">
                         <label className="block mb-1">Customization (Yes/No):</label>
-                        <input type="text" name="customization" className="w-full border bg-white border-gray-300 rounded px-3 py-2" defaultValue={customization} required />
+                        <select  className="w-full border bg-white border-gray-300 rounded px-3 py-2" name="customization" defaultValue={customization} required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
                     </div>
                     <div className="md:w-1/2 md:ml-2">
                         <label className="block mb-1">Processing Time:</label>
@@ -85,7 +95,10 @@ const UpdateForm = () => {
                 </div>
                 <div>
                     <label className="block mb-1">Stock Status (In stock/Made to Order):</label>
-                    <input type="text" name="stockStatus" className="w-full border bg-white border-gray-300 rounded px-3 py-2" defaultValue={stockStatus} required />
+                    <select className="w-full border bg-white border-gray-300 rounded px-3 py-2" name="stockStatus" defaultValue={stockStatus} required>
+                        <option value="In stock">In stock</option>
+                        <option value="Made to Order">Made to Order</option>
+                    </select>
                 </div>
                 <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded w-full">Update</button>
             </form>
