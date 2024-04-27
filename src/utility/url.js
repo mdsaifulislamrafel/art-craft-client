@@ -1,1 +1,2 @@
-export const url = 'https://server-side-1z2r4n3zm-md-saiful-islam-rafels-projects.vercel.app'
+// export const url = 'https://server-side-indol.vercel.app'
+export const url = 'http://localhost:5000'
