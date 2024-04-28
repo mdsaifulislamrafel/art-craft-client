@@ -38,7 +38,7 @@ const Navbar = () => {
                         <NavLink to={"/all-art"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>All Art & craft</NavLink>
 
                         <NavLink to={"/add-art"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>Add Craft & craft</NavLink>
-                        
+
                         {
                             user && <NavLink to={"/my-art"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"}>My Art & Craft</NavLink>
                         }
@@ -71,7 +71,10 @@ const Navbar = () => {
                                     <button onClick={() => handleLogOut()} className='btn btn-success text-white btn-sm'>Log Out</button>
                                 </div>
                             ) : (
-                                <Link to={"/login"} className='btn btn-accent btn-sm font-bold'>Log in</Link>
+                                <div className='space-x-4'>
+                                    <Link to={"/login"} className='btn btn-accent btn-sm font-bold'>Log in</Link>
+                                    <Link to={"/register"} className='btn btn-accent btn-sm font-bold'>Register</Link>
+                                </div>
                             )}
                         </div>
 
